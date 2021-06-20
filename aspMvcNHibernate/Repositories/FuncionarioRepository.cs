@@ -36,6 +36,10 @@ namespace aspMvcNHibernate.Repositories
         public IEnumerable<Funcionarios> FindAll() =>
             _session.Query<Funcionarios>().ToList();
 
+        public Task FindById(long id)
+        {
+            throw new NotImplementedException();
+        }
 
         public async Task Remove(long id)
         {
@@ -55,6 +59,11 @@ namespace aspMvcNHibernate.Repositories
             {
                 transaction?.Dispose();
             }
+        }
+
+        public Task Updade(Funcionarios item)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task Update(Funcionarios item) {
